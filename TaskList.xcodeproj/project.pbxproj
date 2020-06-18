@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E4F9260249AFCDF00959360 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4F925F249AFCDF00959360 /* Sentry */; };
+		8E4F9262249B057C00959360 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F9261249B057C00959360 /* FileManager.swift */; };
 		8EB08C30249A8ADB00CF0FE3 /* TaskListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB08C2F249A8ADB00CF0FE3 /* TaskListTests.swift */; };
 		8EB08C3B249A8ADB00CF0FE3 /* TaskListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB08C3A249A8ADB00CF0FE3 /* TaskListUITests.swift */; };
 		8EB08C67249A8BA500CF0FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB08C48249A8BA500CF0FE3 /* AppDelegate.swift */; };
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E4F9261249B057C00959360 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		8EB08C15249A8AD900CF0FE3 /* TaskList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB08C2B249A8ADB00CF0FE3 /* TaskListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB08C2F249A8ADB00CF0FE3 /* TaskListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTests.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4F9260249AFCDF00959360 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +202,7 @@
 				8EB08C59249A8BA500CF0FE3 /* IndexedCollection.swift */,
 				8EB08C5A249A8BA500CF0FE3 /* Binding.swift */,
 				8EB08C5B249A8BA500CF0FE3 /* ForEach.swift */,
+				8E4F9261249B057C00959360 /* FileManager.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -237,6 +242,9 @@
 			dependencies = (
 			);
 			name = TaskList;
+			packageProductDependencies = (
+				8E4F925F249AFCDF00959360 /* Sentry */,
+			);
 			productName = TaskList;
 			productReference = 8EB08C15249A8AD900CF0FE3 /* TaskList.app */;
 			productType = "com.apple.product-type.application";
@@ -310,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 8EB08C0C249A8AD900CF0FE3;
+			packageReferences = (
+				8E4F925E249AFCDF00959360 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+			);
 			productRefGroup = 8EB08C16249A8AD900CF0FE3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4F9262249B057C00959360 /* FileManager.swift in Sources */,
 				8EB08C75249A8BA500CF0FE3 /* ForEach.swift in Sources */,
 				8EB08C7B249A8BA500CF0FE3 /* SceneDelegate.swift in Sources */,
 				8EB08C6F249A8BA500CF0FE3 /* Task.swift in Sources */,
@@ -698,6 +710,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E4F925E249AFCDF00959360 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E4F925F249AFCDF00959360 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E4F925E249AFCDF00959360 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EB08C0D249A8AD900CF0FE3 /* Project object */;
 }
